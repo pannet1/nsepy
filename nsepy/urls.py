@@ -13,8 +13,8 @@ from nsepy.constants import symbol_count, symbol_list
 
 session = Session()
 # headers = {
-    # 'Host': 'www1.nseindia.com',
-    # 'Referer': 'https://www1.nseindia.com/products/content/equities/equities/eq_security.htm'}
+# 'Host': 'www1.nseindia.com',
+# 'Referer': 'https://www1.nseindia.com/products/content/equities/equities/eq_security.htm'}
 
 headers = {'Accept': '*/*',
            'Accept-Encoding': 'gzip, deflate, sdch, br',
@@ -50,7 +50,7 @@ def get_symbol_count(symbol):
 #symbol=SBIN&segmentLink=3&symbolCount=1&series=EQ&dateRange=1month&fromDate=&toDate=&dataType=PRICEVOLUMEDELIVERABLE'
 """
 equity_history_url_full = URLFetchSession(
-    url='http://www1.nseindia.com/products/dynaContent/common/productsSymbolMapping.jsp')
+    url='http://www.nseindia.com/products/dynaContent/common/productsSymbolMapping.jsp')
 
 """
 symbol="SBIN"
@@ -157,9 +157,9 @@ symbolCount=
 derivative_history_url = partial(
     URLFetchSession(
         url='http://www1.nseindia.com/products/dynaContent/common/productsSymbolMapping.jsp?',
-        headers = {**headers, **{'Referer': 'https://www1.nseindia.com/products/content/derivatives/equities/historical_fo.htm'}}
-        #headers = (lambda a,b: a.update(b) or a)(headers.copy(),{'Referer': 'https://www1.nseindia.com/products/content/derivatives/equities/historical_fo.htm'})
-        ),
+        headers={**headers, **{'Referer': 'https://www1.nseindia.com/products/content/derivatives/equities/historical_fo.htm'}}
+        # headers = (lambda a,b: a.update(b) or a)(headers.copy(),{'Referer': 'https://www1.nseindia.com/products/content/derivatives/equities/historical_fo.htm'})
+    ),
     segmentLink=9,
     symbolCount='')
 """
